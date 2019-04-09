@@ -14,6 +14,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer --version
 RUN mkdir -p /var/cache /vendor
 
+COPY ./php-ini-overrides.ini /usr/local/etc/php/conf.d/99-overrides.ini
+
 # Redis
 RUN pecl install -o -f redis \
 &&  rm -rf /tmp/pear \
