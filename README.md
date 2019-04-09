@@ -8,3 +8,6 @@ Docker image for running php applications.
 - pdo
 - zip
 - git
+
+## Environment variables
+- `TIMEZONE` - sets Unix timezone to specified value (default `Europe/Prague`)
